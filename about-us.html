@@ -28,7 +28,80 @@
   color: white;
 }
 
+.x_xslider {
+    background: #fff;
+    height: 75pt;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    user-select: none;
+    touch-action: none;
+    
+}
+
+.x_xslider:before {
+    left: 0;
+    top: 0;
+}
+.x_xslider:after,
+
+.x_xslider:after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.x_xslider:after,
+
+
+.x_xslider .slide-track-1 {
+    animation: scroll-l 30s linear infinite;
+    display: flex;
+    width: 3500px;
+}
+.x_xslider .slide-track-2 {
+    animation: scroll-r 30s linear infinite;
+    display: flex;
+    width: 3500px;
+}
+
+.x_xslider .slide {
+    height: 75pt;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.x_xslider .slide img {
+    width: 180px;
+    padding: 1pc;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes scroll-l {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+@keyframes scroll-r {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(calc(-250px * 7));
+    }
+} 
 </style>
+
+
+
 
 <body>
   <div class="wrapper">
@@ -48,105 +121,50 @@
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ml-auto">
               <li class="nav__item">
-                    <a href="index.html" class="nav__item-link ">Home</a>
-                </li><!-- /.nav-item -->
-
-                <li class="nav__item with-dropdown">
-                  <a href="about-us.html" class="dropdown-toggle nav__item-link active">About Us</a>
-                  <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                  <ul class="dropdown-menu">
-                    <li class="nav__item"><a href="about-us.html" class="nav__item-link">Corporate Profile</a></li>
-
-                    <li class="nav__item"><a href="awards.html" class="nav__item-link">Certifications & Accreditations</a></li>
-                    <!-- /.nav-item -->
-                    <li class="nav__item"><a href="about-us.html#I&F" class="nav__item-link">Infrastructure & Facilities</a></li>
-                    <!-- /.nav-item -->
-                    <li class="nav__item"><a href="about-us.html#R&D" class="nav__item-link">Research and Development
-                    </a></li>
-                    <!-- /.nav-item -->
-                    <li class="nav__item"><a href="about-us.html#Q&P" class="nav__item-link">Quality - Our Priority</a>
-                    </li>
-                    <!-- /.nav-item -->
-                    <li class="nav__item"><a href="about-us.html#L&W" class="nav__item-link">Logistics and Warehousing</a></li>
-                    <!-- /.nav-item -->
-                    <li class="nav__item"><a href="about-us.html#C&S" class="nav__item-link">Customer Support
-                    </a></li>
-                   
-                    <!-- /.nav-item -->
-                  </ul><!-- /.dropdown-menu -->
-                </li><!-- /.nav-item -->
-
-
-              
-              <li class="nav__item with-dropdown">
-                <a href="Industries-industry-served.html" class="dropdown-toggle nav__item-link">Industries</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu wide-dropdown-menu">
-                  <li class="nav__item">
-                    <div class="row mx-0">
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <h6>Industries Served</h6>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link"
-                              href="industries-single-industry.html">Petroleum & Gas</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link"
-                              href="industries-single-industry.html">Construction &
-                              Engineering</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link"
-                              href="industries-single-industry.html">Mechanical
-                              Engineering</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link"
-                              href="industries-single-industry.html">Industrial
-                              Chemicals</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link"
-                              href="industries-single-industry.html">Automotive
-                              Manufacturing</a>
-                          </li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="industries-single-industry.html">Bridge
-                              Construction</a></li>
-                          <!-- /.nav-item -->
-                        </ul>
-                      </div><!-- /.col-sm-6 -->
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <h6>Industry Sectors</h6>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Retail &
-                              Consumer</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Sciences &
-                              Healthcare</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Industrial &
-                              Chemical</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Power
-                              Generation</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Food &
-                              Beverage</a></li> <!-- /.nav-item -->
-                          <li class="nav__item"><a class="nav__item-link" href="single-industry.html">Oil & Gas</a></li>
-                          <!-- /.nav-item -->
-                        </ul>
-                      </div><!-- /.col-sm-6 -->
-                    </div><!-- /.row -->
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
+                  <a href="index.html" class="nav__item-link ">Home</a>
               </li><!-- /.nav-item -->
+
               <li class="nav__item with-dropdown">
-                <a href="blog.html" class="dropdown-toggle nav__item-link">News & Media</a>
+                <a href="about-us.html" class="dropdown-toggle nav__item-link active">About Us</a>
                 <i class="fa fa-angle-right" data-toggle="dropdown"></i>
                 <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="blog.html" class="nav__item-link">Our Blog</a></li>
+                  <li class="nav__item"><a href="about-us.html" class="nav__item-link">Corporate Profile</a></li>
+
+                  <li class="nav__item"><a href="awards.html" class="nav__item-link">Certifications & Accreditations</a></li>
                   <!-- /.nav-item -->
-                  <li class="nav__item"><a href="blog-single-post.html" class="nav__item-link">Single Blog Post</a></li>
+                  <li class="nav__item"><a href="about-us.html#I&F" class="nav__item-link">Infrastructure & Facilities</a></li>
                   <!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-grid.html" class="nav__item-link">Case Studies Grid</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-carousel.html" class="nav__item-link">Case Studies
-                      Carousel</a></li><!-- /.nav-item -->
-                  <li class="nav__item"><a href="case-studies-single.html" class="nav__item-link">Single Case Study</a>
-                  </li><!-- /.nav-item -->
+                  <li class="nav__item"><a href="about-us.html#R&D" class="nav__item-link">Research and Development
+                  </a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="about-us.html#Q&P" class="nav__item-link">Quality - Our Priority</a>
+                  </li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="about-us.html#L&W" class="nav__item-link">Logistics and Warehousing</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="about-us.html#C&S" class="nav__item-link">Customer Support
+                  </a></li>
+                  <!-- /.nav-item -->
+                 
+                  <!-- /.nav-item -->
                 </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+
+              <li class="nav__item with-dropdown">
+                <a href="about-us.html" class="dropdown-toggle nav__item-link">Products</a>
+                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="liquid-section.html" class="nav__item-link">Liquid Section</a></li>
+
+                  <li class="nav__item"><a href="ointment.html" class="nav__item-link">Ointment Section</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="OSD.html" class="nav__item-link">Osd & Tablet Processing</a></li>
+                
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              
+              <li class="nav__item">
+                <a href="gallery.html" class="nav__item-link">Gallery</a>
               </li><!-- /.nav-item -->
               <li class="nav__item">
                 <a href="contacs.html" class="nav__item-link">Contacts</a>
@@ -156,7 +174,7 @@
           <div class="navbar-modules">
             <ul class="list-unstyled d-flex align-items-center modules__btns-list">
               <li><a href="#" class="module__btn module__btn-search"><i class="fa fa-search"></i></a></li>
-              <li class="d-none d-lg-block"><a href="request-quote.html" class="btn btn__primary module__btn-request">
+              <li class="d-none d-lg-block"><a href="contacs.html" class="btn btn__primary module__btn-request">
                   <span>Request A Quote</span><i class="icon-arrow-right2"></i>
                 </a></li>
               <li class="d-none d-lg-block">
@@ -409,35 +427,96 @@
     <!-- =====================
          Clients 1
       ======================== -->
-    <section id="clients" class="clients clients-1 border-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="carousel owl-carousel" data-slide="6" data-slide-md="4" data-slide-sm="2" data-autoplay="true"
-              data-nav="false" data-dots="false" data-space="20" data-loop="true" data-speed="700">
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/9.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/10.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/11.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/12.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/13.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/clients/11.png" alt="client"></a>
-              </div><!-- /.client -->
-            </div><!-- /.carousel -->
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.clients 1 -->
+      <section id="clients" class="clients clients-1">  
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+             
+              <div class="x_xslider">
+                <div class="slide-track-1">
+                    <div class="slide">
+                        <img src="assets/images/clients/1.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/2.png" alt="">
+                    </div> 
+                    <div class="slide">
+                        <img src="assets/images/clients/3.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/4.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/5.png" alt="">
+                    </div>
+            
+                    <div class="slide">
+                        <img src="assets/images/clients/6.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/7.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/8.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/9.png" alt="">
+                    </div> 
+                    <div class="slide">
+                        <img src="assets/images/clients/10.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/11.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/12.png" alt="">
+                    </div>
+            
+                    <div class="slide">
+                        <img src="assets/images/clients/13.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/14.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/15.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/16.png" alt="">
+                    </div> 
+                    <div class="slide">
+                        <img src="assets/images/clients/17.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/18.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/19.png" alt="">
+                    </div>
+            
+                    <div class="slide">
+                        <img src="assets/images/clients/20.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/21.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/22.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/clients/23.png" alt="">
+                    </div>
+                    <div class="slide">
+                      <img src="assets/images/clients/24.png" alt="">
+                    </div>
+                </div>
+            </div>
+           
+            </div><!-- /.col-lg-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section><!-- /.clients 1 -->
+  
 
     <!-- ========================
       Footer
@@ -455,7 +534,7 @@
               </div>
             </div><!-- /.col-lg-4 -->
             <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Company</h6>
+             <!-- <h6 class="footer__widget-title">Company</h6>
               <div class="footer__widget-content">
                 <nav>
                   <ul class="list-unstyled">
@@ -467,11 +546,11 @@
                     <li><a href="#">Careers</a></li>
                   </ul>
                 </nav>
-              </div><!-- /.footer-widget-content -->
+              </div>/.footer-widget-content -->
             </div><!-- /.col-lg-2 -->
             <div class="col-6 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Industries</h6>
-              <div class="footer__widget-content">
+             <!-- <h6 class="footer__widget-title">Industries</h6> -->
+               <!-- <div class="footer__widget-content">
                 <nav>
                   <ul class="list-unstyled">
                     <li><a href="#">Retail & Consumer</a></li>
@@ -482,7 +561,7 @@
                     <li><a href="#">Oil & Gas</a></li>
                   </ul>
                 </nav>
-              </div><!-- /.footer-widget-content -->
+              </div>/.footer-widget-content -->
             </div><!-- /.col-lg-2 -->
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 footer__widget footer__widget-newsletter">
               <div class="footer__widget-content">
@@ -513,12 +592,12 @@
                   <ul class="list-unstyled footer__copyright-links d-flex flex-wrap">
                     <li>
                       <a href="#">
-                        &copy; 2019 Industic, with Love by <span class="color-theme">7oroof.com</span>
+                        &copy; Copyright 2023 Well-Mach, All Right Reserved
                       </a>
                     </li>
-                    <li><a href="#">Terms & Conditions </a></li>
+                      <!-- <li><a href="#">Terms & Conditions </a></li>
                     <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Sitemap</a></li> -->
                   </ul>
                 </nav>
 
@@ -526,9 +605,9 @@
             </div><!-- /.col-lg-6 -->
             <div class="col-sm-12 col-md-3 col-lg-3 d-flex align-items-center">
               <div class="social__icons justify-content-end w-100">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100092974415643&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/well-mach/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/wellmachindia/?igshid=ZDc4ODBmNjlmNQ%3D%3D"><i class="fa fa-instagram"></i></a>
               </div><!-- /.social-icons -->
             </div><!-- /.col-lg-6 -->
           </div><!-- /.row -->
